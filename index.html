@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#myForm").submit(function (e) {
+          if ($("#firstName").val() === "" || $("#lastName").val() === "") {
+            alert("Please fill all the fields");
+            e.preventDefault();
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form id="myForm">
+      <input type="text" id="firstName" placeholder="First Name" />
+      <br />
+      <br />
+      <input type="text" id="lastName" placeholder="Last Name" />
+      <br />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
